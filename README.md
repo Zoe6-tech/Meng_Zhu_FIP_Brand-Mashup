@@ -1,12 +1,9 @@
-# MMED-1056-(01-02)-20W
-## MengZhu scaffold
-
 
 ## Prerequisites
 Need [Python3](https://www.python.org/) to build.
 
 ## Description
-2 pages moke up
+This website is about Tyskie, Tyskie is the most popular Polish beer brand in the world. Want to know more about Tyskie? Please check those five webpages.
 
 
 ## Author
