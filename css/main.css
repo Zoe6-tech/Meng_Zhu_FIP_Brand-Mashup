@@ -1,7 +1,6 @@
 body{
-    font-family: helvetice,arial,sans-serif;
-    background-image: url("../images/background1.jpg");
-    font-size: 14px;
+    font-family: 'Roboto', helvetice,arial,sans-serif;
+    background-color: #000000;
 }
 
 .hidden{
@@ -9,238 +8,224 @@ body{
 }
 
 #container{
-   margin: 0 auto;
-   width: 950px;
-   display: flex;
-   flex-direction: column;
+  margin: 0px auto;
+  max-width: 1800px; 
+  background-color: #000000;
 }
-.mainHeader{
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
+.mainHeader{
+   background-color: #000000;
+}
+
+#mainNav{
+  font-family: 'Roboto', helvetice,arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+#searchCon{
+/*get search boxes to display side by side*/
+  display: flex;
+  flex-direction: row;
+}
+
+#mainNav button{
+  /*okay so lets push it to the right*/
+  margin-left: auto;
+}
+
+#mainNav input[type=text]{
+  width: 70%;
+  height: 30px;
+  padding: 5px;
+  border:1px solid #cacaca;
+  border-radius: 3px 0px 0px 3px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10,0.1);
+  line-height: 1.5;
+  color: #0a0a0a;
+}
+
+#mainNav input[type=submit]{
+   font-family: 'Roboto', sans-serif;
+    height: 42px;
+    width: 30%;
+    border: 1px solid transparent;
+    border-radius: 0px 3px 3px 0px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffe300;
+    color: #000000;
+}
+
+#mainNav input[type=submit]:hover{
+    color: red;
+}
+#crownburger{
+  display: none;/*hide intitially*/
+  margin-top: 20px;/*bump menu below 3 lines*/
+}
+
+#crownburger.slideToggle{
+  display: block;
+}
+
+#mainNav button{
+  background:url(../images/burger.svg) center no-repeat;/*burger icon*/
+  border: 0px;
+  width: 40px;
+  height: 40px;
+  transition: all 400ms ease;
+}
+
+
+#mainNav button.expanded{
+  -webkit-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  transform:rotate(180deg);
+}
+
+#mainNav li a{
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding:10px 0 10px 0;
+  text-align: center;
+
+}
+
+#mainNav li{
+  border-bottom:1px solid  #ffe300;
+}
+
+#mainNav li:first-child{
+  border-top: 1px solid  #ffe300;
+}
+
+#mainNav li:last-child{
+  margin-bottom: 10px;
+}
+
+#mainNav li a:hover{
+  background-color: #FFE300;
+  color: #000000;
+}
+
+#searchForm{
+  margin-top: 20px;
 }
 
 .logoHeader{
-	font-size: 30px;
-     margin:10px 300px;
+     height: 120px;
+     width: 300px;
+     margin:0 auto;
 }
 
-
-#mainNav{
-   font-family: 'Roboto', sans-serif;
-   height: 50px;
-   border: 5px solid  #FFE400;
-   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+/*nav finish*/
 
 
+
+#imageContainer {
+	 max-width:500px;
+	margin:0 auto;
+	overflow:hidden;		
 }
 
-#mainNav ul li{
-	font-size: 23px;
-	float: left;
-	list-style-type:none;
-
+#bottleImages img{
+	max-width: 500px;
 }
 
-#mainNav ul li a{
-    color: #ffffff;
-	display: block;
+.beer-info{
+ display: none;
+}
+
+#bottomNav { 
+	margin-top:25px; 
 	text-align: center;
-	text-decoration: none;
-	padding:15px 43.5px;
-	letter-spacing: 1px;
-	cursor: pointer;
-	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	-o-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
-}
-
-#mainNav ul li a.active {
-  background-color:#FFE300;
-  color: black;
-}
-
-#mainNav ul li a:hover{
-   color: grey;
-     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,ffe300+0 */
-background: rgb(254,252,234); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(255,227,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(255,227,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(255,227,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#ffe300',GradientType=0 ); /* IE6-9 */
-
-}
-
-
-#mainImages {
-  width: 950px;
-  height:400px;
-      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-}
-
-.move{
-	width: 950px;
-   height:400px;
-   overflow: hidden;
-}
-
-.move nav {
-    width: 4750px;
-	height: 475px;
-
-}
-
-.move ul{
-	width: 200%;
-	height: 100%;
-	animation-name: fade;
-	animation-duration:50s;
-	 animation-delay :0s;
-	 animation-timing-function: linear;
-	 animation-iteration-count: infinite;
-
-    -ms-animation: fade 50s 0s linear infinite forwards;
-    -moz-animation: fade 50s 0s  linear infinite forwards;
-    -webkit-animation: fade 50s 0s  linear infinite forwards;
-}
-
-.move ul li{
-    width: 950px;
-    height: 475px;
-    float: left;
-    list-style: none;
-}
-
-
- @keyframes fade {
-      0% {margin-left: 0px;}
-    25% {margin-left: -950px;}
-     50% {margin-left: -1900px;}
-    75% {margin-left: -2850px;}
-     100% { margin-left: -3800px; }
  }
 
- @-webkit-keyframes fade {
-     0% {margin-left: 0px;}
-    25% {margin-left: -950px;}
-     50% {margin-left: -1900px;}
-    75% {margin-left: -2850px;}
-     100% { margin-left: -3800px; }
- }
+#navList li {
+	display:inline;
+	list-style-type:none;
+	cursor:pointer;
+}
 
- @-moz-keyframes fade {
-      0% {margin-left: 0px;}
-    25% {margin-left: -950px;}
-     50% {margin-left: -1900px;}
-    75% {margin-left: -2850px;}
-     100% { margin-left: -3800px; }
- }
+.iconContainer {
+	 width:65px;
+	height:120px;
+	display:inline-block;
+	overflow:hidden;
+	background-image:url(../images/BeerIcons.png);
+	background-repeat:no-repeat;
+	transition:transform .3s;
+	-webkit-transition:-webkit-transform .3s;
+	-moz-transition:-moz-transform .3s;
+}
 
- @-ms-keyframes fade {
-      0% {margin-left: 0px;}
-    25% {margin-left: -950px;}
-     50% {margin-left: -1900px;}
-    75% {margin-left: -2850px;}
-     100% { margin-left: -3800px; }
- }
+.gronie { background-position:0px -116px; }
+.gronie:hover { background-position:0px 0px; }
 
-#mainImages ul:hover {
-    animation-play-state: paused;
-        }
+.Palone { background-position:-65.9px -116px; }
+.Palone:hover { background-position:-65.9px 0px; }
+
+.crown { background-position:-125px -116px; }
+.crown:hover { background-position:-125px 0px; }
+
+.pszenne { background-position:-180px -116px; }
+.pszenne:hover { background-position:-180px 0px; }
+
+.pilzne { background-position:-242px -116px; }
+.pilzne:hover { background-position:-242px 0px; }
 
 /*Home page*/
 
-.jump{
-	height: auto;
-	color: white;
 
+
+.jump{
+	 max-width:1200px;
+	height: auto;
+	color: #ffffff;
+	text-align: center;
+	margin:0 auto;
+	padding: 20px;
 }
 
 .jump h2{
 	font-family: 'Open Sans', sans-serif;
-	margin:40px 350px;
-	font-size: 25px;
+	padding-top: 10px;
+	font-size: 21px;
 }
 
-.jump h2 span{
-	   text-align: center;
-        float:left;
-        position: relative;
-    }
-
-.jump h2 span:nth-child(1){
-        -webkit-animation:jump 2s linear 0s infinite alternate;
-    }
-
-.jump h2 span:nth-child(2){
-        -webkit-animation:jump 2s linear 0.4s infinite alternate;
-    }
-
-.jump h2 span:nth-child(3){
-        -webkit-animation:jump 2s linear 0.8s infinite alternate;
-    }
-
-.jump h2 span:nth-child(4){
-        -webkit-animation:jump 2s linear 1.2s infinite alternate;
-    }
-
-@-webkit-keyframes jump{
-     0%{top:0px;
-        }
-     50%{top:-20px;
-        }
-     100%{top:20px;
-        }
-    }
 
 .jump p{
 	font-family: 'Open Sans', sans-serif;
-    margin-top: 40px;
-    width: 900px;
-    font-size: 17px;
-    margin-left: 30px;
-    text-align: center;
+    font-size: 16px;
+    word-spacing: 1px;
 }
 
 
 .promo{
-	width: 950px;
+	margin:0 auto;
+	max-width: 500px;
 	height: auto;
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 }
 
 .promobox{
-	width: 250px;
+	width:450px;
 	height: auto;
-	margin: 30px 0;
+	margin: 20px auto;
 }
 
 .promoImage{
-	padding: 10px;
+    text-align: center;
 }
 
 .promoImage img{
-	width: 200px;
-	height: 280px;
+	width: 300px;
+	height: 380px;
 }
 
 .promoImage img:hover {
@@ -249,19 +234,531 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 }
 
 .textbox{
+	text-align: center;
 	color:#ffffff;
 	height: auto;
+	padding:10px;
 }
 
 .promobox p{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	margin: 20px 0;
+	margin-bottom:2em;
+	word-spacing:1px;
 }
 
 .promobox p:first-letter{
-     font-size: 25px;
+     font-size: 29px;
 }
+
+
+
+/*Product page*/
+.beerbck{
+	background-image: url(../images/bar2.jpg);
+}
+
+#mainImages{
+	width: 400px;
+	margin:0 auto;
+}
+
+#mainImages img{
+    width: 400px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.product{
+	height: auto;
+   margin: 10px 0;
+	display: flex;
+	flex-direction: row;
+
+}
+
+.productlist{
+	display: none;
+}
+
+
+.productlist ul li {
+	list-style-type:none;
+	margin-bottom: 30px;
+	margin-right: 10px;
+}
+
+.productlist ul li a{
+	display: block;
+	color: #ffffff;
+	font-size: 17px;
+	padding: 20px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	text-align: center;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+.productlist ul li a:hover {
+	color: #FFE400;
+	border-radius: 1px;
+	border-bottom: 3px solid red;
+	    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
+background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.productdetail{
+    height: auto;
+    width: 550px;
+    margin:10px 0px 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productInfo{
+	margin:0 auto;
+	width: 400px;
+    height: auto;
+    position: relative;
+    display: flex;
+	flex-direction: row;
+}
+
+.detailbox{
+    height: auto;
+    width: 200px;
+    color: #ffffff;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.detailbox h5{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+.detailbox h5:hover{
+    color: #FFE400;
+}
+
+.detailbox p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+
+.productImage1{
+	height: 350px;
+	width:400px;
+	background-image: url("../images/jasnepelne_background1.jpg") ;
+	opacity: 0.7;
+}
+
+.productImage2{
+	height: 350px;
+	width:400px;
+	background-image: url("../images/pilzne_background1.jpg");
+    opacity: 0.7;
+}
+
+.productImage3{
+	height: 350px;
+	width:400px;
+	background-image: url("../images/pszenne_background1.jpg");
+    opacity: 0.7;
+}
+
+/*beers page finish */
+
+
+/**event page start**/
+.tour{
+	position: relative;
+	margin: 0 auto;
+	width: 500px;
+}
+
+.bottom-left{
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 470px;
+  padding: 15px ;
+}
+
+.tour h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.tour img{
+	width: 500px;
+}
+
+.explore{
+	width: 450px;
+	color: #ffffff;
+	margin: 0 auto;
+
+}
+
+.explore h3{
+    font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	padding: 20px;
+	text-align: center;
+}
+
+.trip{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.trip img{
+	margin: 20px auto;
+	width: 300px;
+  height: 350px;
+
+}
+
+.trip img:hover{
+	 border-radius: 60%;
+}
+
+.trip p{
+	font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   word-spacing: 3px;
+   padding:20px;
+}
+
+
+.trip p:hover{
+	  background: rgba(0, 0, 0, 0.8);
+}
+
+.trip p:first-letter{
+   font-size: 25px;
+}
+
+.includes{
+	width: 400px;
+	color: #ffffff;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.includes:hover{
+	 background: rgba(0, 0, 0, 0.8);
+}
+
+.includes h4{
+	font-family: 'Lato', sans-serif;
+	font-size: 19px;
+}
+
+.includes ul.a {
+  padding: 10px;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.includes ul.b {
+  padding: 10px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.includes ul li{
+	font-family: 'Open Sans', sans-serif;
+	  padding: 5px;
+}
+
+.includes ul li:first-letter{
+    font-size: 18px;
+}
+
+.includes ul li:hover{
+	  padding: 6px;
+	  color: #FFE400;
+}
+
+.includes a{
+	font-family: 'Roboto', sans-serif;
+	width: 100px;
+	color: #FFE400;
+   background-color: #000000;
+	margin-top: 10px;
+	padding:10px 30px;
+	text-align: center;
+	text-decoration:none;
+	cursor: pointer;
+	border-radius: 1px;
+	 border: 1px solid #FFE400;
+	box-shadow: 0 1px 4px rgba(0,0,0,2);
+	text-shadow: 1px 1px 1px rgba(0,0,0,2);
+}
+.includes a:active{
+	position: relative;
+	top:1px;
+}
+.includes a:hover{
+	color: red;
+	border-bottom: 2px solid red;
+}
+
+.includes p{
+	color: red;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+
+.chart{
+	width: 400px;
+	margin:0 auto;
+	padding: 20px;
+}
+
+.chart:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.chart h3{
+	font-family: 'Lato', sans-serif;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.chart a{
+	color: #FFE400;
+	text-decoration:none;
+}
+
+.chart a:hover{
+	color: red;
+}
+
+table, th, td {
+  border: 1px solid #ffffff;
+  border-collapse: collapse;
+  color:#ffffff;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*event page finish*/
+
+
+/**contact page**/
+
+.contact{
+	width: 450px;
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact h3{
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    font-size: 20px;
+    }
+
+.contact h4{
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    }
+
+.contact p{
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+}
+
+.contact p:hover{
+    font-family: 'Open Sans', sans-serif;
+    padding: 6px;
+    color: #FFE400;
+}
+
+.contactArea{
+    display: flex;
+	flex-direction: column;
+    text-align: center;
+	color: white;
+
+   width: 250px;
+    margin: 10px auto;
+}
+
+
+.contactArea a{
+	width: 100px;
+	margin: 0 auto;
+}
+
+.contactForm{
+	width: 300px;
+	margin:0 auto;
+     padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.contactForm p:hover{
+	color: red;
+}
+.contactForm label{
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+      padding: 10px 0;
+}
+
+.contactForm label:hover{
+	color: #FFE400;
+}
+
+#contactForm input,textarea{
+    border-radius: 4px;
+	width: 100%;
+	margin:5px 0px;
+}
+#contactForm input{
+   height: 20px;
+}
+
+
+input:focus {
+  background-color:#FFE400;
+}
+textarea:focus {
+  background-color:#FFE400 ;
+}
+
+
+#contactForm a{
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	width: 100px;
+	margin-top: 5px;
+	color: #FFE400;
+   background-color: #000000;
+	padding:10px 30px;
+	text-align: center;
+	text-decoration:none;
+	cursor: pointer;
+	border-radius: 1px;
+	 border: 1px solid #FFE400;
+	box-shadow: 0 1px 4px rgba(0,0,0,2);
+	text-shadow: 1px 1px 1px rgba(0,0,0,2);
+}
+
+#contactForm a:active{
+	position: relative;
+	top:1px;
+}
+#contactForm a:hover{
+	color: red;
+	border-bottom: 2px solid red;
+}
+
+/*contact us page finish*/
+
+
+/**about page**/
+.honor{
+    width: 350px;
+    margin:0px auto;
+    color: #ffffff;
+}
+
+.honor h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.honor ul {
+	font-family: 'Open Sans', sans-serif;
+     list-style-type:disc ;
+     list-style-position: inside;
+}
+
+.honor ul li{
+	  padding: 5px;
+	  font-size: 15px;
+}
+
+.honor ul li:hover{
+	  padding: 6px;
+	  color: #FFE400;
+}
+
+.unique{
+     width: 400px;
+     height: auto;
+     margin:0px auto;
+     color: #ffffff;
+}
+
+.unique h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	margin: 20px 0;
+}
+
+.uniques{
+	display: flex;
+	flex-direction: column;
+}
+
+.uniques img{
+	margin:0 auto;
+     width: 300px;
+     height: 350px;
+
+}
+
+.uniques img:hover{
+    filter:saturate(2);
+}
+
+.uniques ul {
+	font-family: 'Open Sans', sans-serif;
+	 margin:10px;
+     list-style-type:disc;
+     list-style-position: inside;
+}
+
+.uniques ul li{
+	  padding: 5px;
+}
+
+.uniques ul li:hover{
+	  padding: 6px;
+	  color: #FFE400;
+}
+
+
 
 .buttom1{
 	font-family: 'Roboto', sans-serif;
@@ -284,21 +781,465 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 	top:10px;
 }
 .buttom1:hover{
+	color: #ffffff;
+	background-color: blue;
+	filter: drop-shadow(16px 16px 20px blue) invert(75%);
+}
+
+.buttom2{
+	font-family: 'Roboto', sans-serif;
+	background-color: #000000;
+	position: absolute;
+	margin-top: 10px;
+	padding:10px 30px;
+	text-align: center;
+	text-decoration:none;
 	color: #FFE400;
+	cursor: pointer;
+	border-radius: 1px;
+	 border: 1px solid #FFE400;
+	box-shadow: 0 1px 4px rgba(0,0,0,2);
+	text-shadow: 1px 1px 1px rgba(0,0,0,2);
+}
+.buttom2:active{
+	position: relative;
+	top:15px;
+}
+.buttom2:hover{
+	color: red;
 	border-bottom: 2px solid red;
 }
 
 
+/**footer **/
+#footer{
+	display: flex;
+	flex-direction:column;
+}
 
-/*Product page*/
-.product{
-	height: auto;
-   margin: 10px 0;
+#footerNav{
+	font-family: 'Roboto', sans-serif;
+	width: 70%;
+	margin-left: 5%;
+}
+
+.footerbox{
+    display: flex;
+    flex-direction: row;
+}
+
+#footerNav ul{
+	 list-style-type: none;
+     margin: 0;
+     padding: 20px;
+}
+
+#footerNav ul li a{
+	display: block;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'Anton', sans-serif;
+    width: 100px;
+    padding: 8px 1px;
+    text-decoration: none;
+
+    -webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+#footerNav ul li a:hover{
+	color: #FFE400;
+}
+
+#copyright{
+    color: #FFE400;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#copyright p{
+   font-size: 15px;
+}
+
+.socialMedia{
+	list-style: none;
+	float: right;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin-right: 5%;
+}
+
+.socialMedia img{
+	border-radius: 8px;
+	width: 45px;
+	margin-bottom: 10px;
+}
+
+.socialMedia  a:hover{
+	filter: drop-shadow(16px 16px 20px blue) invert(75%);
+}
+
+
+/*start mobile size*/
+
+@media screen and (min-width: 600px){
+
+   #imageContainer {
+	 max-width:600px;
+}
+
+#bottleImages img{
+	max-width: 600px;
+}
+  
+  .promo{
+	max-width: 600px;
+}
+
+.promobox{
+	width:550px;
+}
+
+
+.socialMedia{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin-top: 15%;
+}
+
+.socialMedia img{
+	border-radius: 15px;
+	width: 45px;
+    padding:10px;
+}
+
+/*beers page*/
+
+#mainImages{
+	width: 600px;
+}
+
+#mainImages img{
+    width: 600px;
+}
+
+
+.productlist{
+	display: none;
+}
+
+.productdetail{
+    height: auto;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.productInfo{
+	width: 600px;
+}
+
+.detailbox{
+    width: 250px;
+}
+
+.detailbox h5{
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom:10px;
+}
+.detailbox p{
+    font-size: 14px;
+    padding-bottom:5px;
+}
+
+.productImage1{
+	width:600px;
+	background-image: url("../images/jasnepelne_background2.jpg") ;
+}
+
+.productImage2{
+	width:600px;
+	background-image: url("../images/pilzne_background2.jpg");
+}
+
+.productImage3{
+	width:600px;
+	background-image: url("../images/pszenne_background2.jpg");
+}
+
+/*events page*/
+.tour{
+	width: 600px;
+}
+
+.bottom-left{
+  width: 600px;
+}
+
+
+.tour img{
+	width: 600px;
+}
+
+.explore{
+	width: 600px;
+}
+
+.explore h3{
+	font-size: 18px;
+}
+
+.trip p{
+   font-size: 15px;
+}
+
+
+.includes{
+	width: 550px;
+}
+
+.chart{
+	width: 550px;
+}
+
+th, td {
+  font-size: 13px;
+}
+
+
+/**contact page**/
+
+.contact{
+	width: 600px;
 	display: flex;
 	flex-direction: row;
 }
 
+.contactArea h4{
+	font-size: 16px;
+}
+
+.contactArea p{
+	font-size: 13px;
+}
+.contactForm label{
+	font-size: 15px;
+}
+
+/*about us page */
+
+.honor{
+    width: 550px;
+
+}
+
+.unique{
+     width: 550px;
+
+}
+
+.unique h3{
+	font-size: 20px;
+}
+
+}
+
+
+@media screen and (min-width: 700px){
+
+   #imageContainer {
+	 max-width:700px;
+	 position: relative;
+}
+
+#bottleImages img{
+	max-width: 700px;
+}
+
+
+  .promo{
+	max-width: 700px;
+}
+
+.promobox{
+	width:650px;
+}
+
+/*events page*/
+.tour{
+	width: 700px;
+}
+
+.bottom-left{
+  width: 700px;
+}
+
+
+.tour img{
+	width: 700px;
+}
+
+.explore{
+	width: 700px;
+}
+
+.explore h3{
+	font-size: 19px;
+}
+
+.trip p{
+   font-size: 16px;
+}
+
+.includes{
+	width: 600px;
+}
+
+.chart{
+	width: 650px;
+}
+
+th, td {
+  font-size: 15px;
+}
+
+.contact{
+	padding-top: 20px;
+}
+.contactForm{
+	width: 400px;
+}
+
+}
+
+
+@media screen and (min-width:800px){
+
+/*home page*/
+
+#imageContainer {
+	 max-width:950px;
+	height:475px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+
+#bottleImages{ 
+	position:relative;
+	 width:4750px; 
+	 transition: all 1.3s; 
+	}
+
+#bottleImages img { 
+	max-width:950px; 
+	float:left; 
+}
+
+.beer-info{
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+  width:42%;
+  letter-spacing: 1px;
+  margin-top: -35%;
+  margin-left: 10%;
+  color: #bce954;
+  position: absolute;
+}
+
+
+
+#bottomNav { 
+	margin-top:25px; 
+	text-align: center;
+ }
+
+#navList li {
+	display:inline;
+	list-style-type:none;
+	padding:0px 10px;
+	cursor:pointer;
+}
+
+.promo{
+	margin:0 auto;
+	max-width: 1300px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+   justify-content: space-between;
+}
+
+.promobox{
+	width: 400px;
+	height: auto;
+	margin: 30px 0;
+}
+
+.promoImage{
+	padding: 10px;
+}
+
+.promoImage img{
+	width: 300px;
+	height: 380px;
+}
+
+.promoImage img:hover {
+    border-radius: 99%;
+    filter:saturate(2);
+}
+
+.textbox{
+	text-align: center;
+	color:#ffffff;
+	height: auto;
+	padding:10px ;
+}
+
+.promobox p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 20px 0;
+	margin-bottom:2em;
+}
+
+.promobox p:first-letter{
+     font-size: 25px;
+}
+
+.socialMedia{
+	margin-top: 10%;
+}
+
+/*beers page*/
+.beerbck{
+		background-image: url(../images/bar2.jpg);
+}
+
+#mainImages{
+	width: 950px;
+	margin:0 auto;
+}
+
+#mainImages img{
+	width: 950px;
+}
+
+.product{
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	max-width: 950px;
+	margin:0 auto;
+} 
+
 .productlist{
+	display: flex;
 	font-family: 'Kelly Slab', cursive;
 	height: auto;
 	width: 200px;
@@ -340,8 +1281,6 @@ background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
 }
-
-
 
 .productdetail{
     height: auto;
@@ -402,191 +1341,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     opacity: 0.7;
 }
 
-.buttom2{
-	font-family: 'Roboto', sans-serif;
-	background-color: #000000;
-	position: absolute;
-	margin-top: 10px;
-	padding:10px 30px;
-	text-align: center;
-	text-decoration:none;
-	color: #FFE400;
-	cursor: pointer;
-	border-radius: 1px;
-	 border: 1px solid #FFE400;
-	box-shadow: 0 1px 4px rgba(0,0,0,2);
-	text-shadow: 1px 1px 1px rgba(0,0,0,2);
-}
-.buttom2:active{
-	position: relative;
-	top:15px;
-}
-.buttom2:hover{
-	color: red;
-	border-bottom: 2px solid red;
-}
-
-
-
-/**event**/
+/*events page*/
 .tour{
-	position: relative;
+	width: 760px;
+	margin:0 auto;
 }
+
 
 .bottom-left{
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 890px;
-  padding: 30px ;
+  width: 750px;
 }
 
-.tour h3{
-	font-family: 'Roboto', sans-serif;
-	font-size: 35px;
-	margin-bottom: 20px;
-}
 
+.tour img{
+	width: 750px;
+}
 
 .explore{
-	width: 800px;
-	color: #ffffff;
-	margin: 0 auto;
+	width: 700px;
+	margin:0 auto;
 }
 
 .explore h3{
-    font-family: 'Roboto', sans-serif;
-	font-size: 22px;
-	padding: 20px;
-	text-align: center;
+	font-size: 19px;
 }
 
 .trip{
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .trip img{
-	margin: 20px 10px;
-	width: 200px;
-  height: 250px;
-}
-
-.trip img:hover{
-	 border-radius: 60%;
-}
-
-.trip p{
-	font-family: 'Open Sans', sans-serif;
-   margin: 20px 10px;
-   font-size: 15px;
-}
-
-.trip p:first-letter{
-   font-size: 25px;
-}
-
-.includes{
-	width: 650px;
-	color: #ffffff;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
-
-.includes h4{
-	font-family: 'Lato', sans-serif;
-	font-size: 20px;
-}
-
-.includes ul.a {
-  padding: 10px;
-  list-style-type: square;
-  list-style-position: inside;
-}
-
-.includes ul.b {
-  padding: 10px;
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.includes ul li{
-	font-family: 'Open Sans', sans-serif;
-	  padding: 5px;
-}
-
-.includes ul li:first-letter{
-    font-size: 18px;
-}
-
-.includes ul li:hover{
-	  padding: 6px;
-	  color: #FFE400;
-}
-
-.includes a{
-	font-family: 'Roboto', sans-serif;
-	width: 100px;
-	color: #FFE400;
-   background-color: #000000;
-	margin-top: 10px;
-	padding:10px 30px;
-	text-align: center;
-	text-decoration:none;
-	cursor: pointer;
-	border-radius: 1px;
-	 border: 1px solid #FFE400;
-	box-shadow: 0 1px 4px rgba(0,0,0,2);
-	text-shadow: 1px 1px 1px rgba(0,0,0,2);
-}
-.includes a:active{
-	position: relative;
-	top:1px;
-}
-.includes a:hover{
-	color: red;
-	border-bottom: 2px solid red;
-}
-
-.includes p{
-	color: red;
-	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-}
-
-.chart{
-	width: 700px;
-	margin:0 auto;
-	padding: 20px;
-}
-
-.chart h3{
-	font-family: 'Lato', sans-serif;
-	color: #ffffff;
-	font-size: 20px;
-	padding: 10px;
-}
-
-.chart a{
-	color: #FFE400;
-	text-decoration:none;
-}
-
-.chart a:hover{
-	color: red;
-}
-
-table, th, td {
-  border: 1px solid #ffffff;
-  border-collapse: collapse;
-  color:#ffffff;
-}
-th, td {
-  padding: 5px;
-  text-align: left;
+	width: 250px;
+	height: 300px;
 }
 
 
@@ -651,11 +1438,11 @@ th, td {
 .uniques img{
      width: 300px;
      height: 350px;
-     opacity: 0.7;
+
 }
 
 .uniques img:hover{
-    transform: scaleX(-1);
+    filter:saturate(2);
 }
 
 .uniques ul {
@@ -674,198 +1461,261 @@ th, td {
 	  color: #FFE400;
 }
 
+}
 
-/**contact page**/
 
-.contact{
-	width: 900px;
-	margin:0 0 40px 0;
+@media screen and (min-width:1100px){
+	.mainHeader{
 	display: flex;
 	flex-direction: row;
 }
 
-.contact h3{
-    font-family: 'Lato', sans-serif;
-    padding: 5px;
-    font-size: 20px;
-    }
-
-.contact h4{
-    font-family: 'Lato', sans-serif;
-    padding: 5px;
-    font-size: 16px;
-    margin-top: 20px;
-    }
-
-.contact p{
-    font-family: 'Open Sans', sans-serif;
-    padding: 5px;
+.logoHeader{
+     height: 120px;
+     width: 300px;
+     margin-left: 70px;
+     margin-right: 25px;
+     order: -1;
 }
 
-.contact p:hover{
-    font-family: 'Open Sans', sans-serif;
-    padding: 6px;
-    color: #FFE400;
+#mainNav{
+   font-family: 'Roboto', sans-serif;
+   margin-top:35px;
+   text-align: right;
+    text-transform: uppercase;
+    width: 70%;
 }
 
-.contactArea{
+#button{
+    display: none;
+  }
+
+ #crownburger{
+    /*display: block;*/
     display: flex;
-	flex-direction: column;
-    text-align: center;
-	color: white;
-	padding: 20px 30px 0px 30px;
-   width: 350px;
-    margin: 0px 50px 10px 40px;
-}
-
-.contactArea a{
-	width: 100px;
-	margin: 0 auto;
-}
-
-.contactForm{
-	padding: 5px;
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-}
-
-.contactForm p:hover{
-	color: red;
-}
-.contactForm label{
-      font-family: 'Lato', sans-serif;
-      font-size: 15px;
-      padding: 10px 0;
-}
-
-.contactForm label:hover{
-	color: #FFE400;
-}
-
-#contactForm input,textarea{
-    border-radius: 4px;
-	width: 100%;
-	margin:5px 0px;
-}
-#contactForm input{
-   height: 20px;
-}
+    flex-direction: row;
+  }
 
 
-input:focus {
-  background-color:#FFE400;
-}
-textarea:focus {
-  background-color:#FFE400 ;
+#mainNav ul li{
+	border-bottom: none;
+	float: left;
+	list-style-type:none;
+    margin-right: 5px;
+	font-size: 14px;
 }
 
-
-#contactForm a{
-	position: absolute;
-	font-family: 'Roboto', sans-serif;
-	width: 100px;
-	margin-top: 5px;
-	color: #FFE400;
-   background-color: #000000;
-	padding:10px 30px;
-	text-align: center;
-	text-decoration:none;
+#mainNav ul li a{
+	padding:5px 15px;
+	letter-spacing: 1px;
 	cursor: pointer;
-	border-radius: 1px;
-	 border: 1px solid #FFE400;
-	box-shadow: 0 1px 4px rgba(0,0,0,2);
-	text-shadow: 1px 1px 1px rgba(0,0,0,2);
-}
-
-#contactForm a:active{
-	position: relative;
-	top:1px;
-}
-#contactForm a:hover{
-	color: red;
-	border-bottom: 2px solid red;
-}
-
-/**footer **/
-#footer{
-	background-color: black;
-	display: flex;
-	flex-direction: row;
-}
-
-#footerNav{
-	font-family: 'Roboto', sans-serif;
-    width: 150px;
-    margin:15px 0 0 15px;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
-}
-
-#footerNav ul{
-	 list-style-type: none;
-     margin: 0;
-     padding: 0;
-}
-
-#footerNav ul li a{
-	display: block;
-	color: #ffffff;
-	font-size: 15px;
-	font-family: 'Anton', sans-serif;
-    width: 100px;
-    padding: 8px 1px;
-    text-decoration: none;
-
-    -webkit-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
 	-o-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 }
 
-#footerNav ul li a:hover{
-	color: #FFE400;
+#mainNav ul li a.active {
+  border-bottom:2px solid #FFE300;
+  color: #ffffff;
+  padding-bottom: 3px;
 }
 
-#copyright{
+#mainNav ul li a:hover{
+   color: #ffffff;
+	background-color: blue;
+	border-radius: 5px;
+	filter: drop-shadow(16px 16px 20px blue) invert(75%);
+}
+#mainNav li:first-child{
+    border-top: none;
+  }
+
+#searchFrom{
+	width: 27%;
+  }
+
+#searchFrom input[type=text]{
+  height: 20px;
+  padding: 5px;
+  border:1px solid #cacaca;
+  border-radius: 3px 0px 0px 3px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10,0.1);
+  line-height: 1.5;
+  color: #0a0a0a;
+}
+
+#searchFrom input[type=submit]{
 	font-family: 'Roboto', sans-serif;
-	color: #FFE400;
-	width: 200px;
-	height: 30px;
-	text-align: center;
-	margin-top: 160px;
-	margin-left: 220px;
-	    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+0 */
-background: rgb(69,72,77); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 0%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    height: 32px;
+    width: 80px;
+    border: 1px solid transparent;
+    border-radius: 0px 3px 3px 0px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffe300;
+    color: #000000;
+}
 
+#searchFrom input[type=submit]:hover{
+	color: red;
+}
+
+.beer-info{
+  width:35%;
+  margin-top: -25%;
+  margin-left: 15%;
+}
+
+
+/**event**/
+.tour{
+	margin: 0 auto;
+	width: 900px;
+}
+
+.bottom-left{
+  width: 870px;
+}
+
+.tour h3{
+	font-size: 27px;
+}
+
+.tour img{
+	width: 900px;
+}
+.explore{
+	width: 900px;
+}
+
+.trip img{
+	margin: 20px 10px;
+	width: 200px;
+  height: 250px;
+}
+
+.trip p{
+   margin: 20px 10px;
+}
+
+.includes{
+	width: 750px;
+}
+
+.chart{
+	width: 800px;
 
 }
+
+.chart h3{
+	font-size: 20px;
+	padding: 10px;
+}
+
+
+th, td {
+  padding: 7px;
+  text-align: left;
+}
+
+
+/**contact page**/
+
+.contact{
+	width: 850px;
+	margin:0 auto;
+}
+
+}
+
+
+@media screen and (min-width:1300px){
+
+
+.logoHeader{
+     margin-right: 40px;
+}
+
+
+#mainNav ul li{
+    margin-right: 10px;
+	font-size: 17px;
+}
+
+#mainNav ul li a{
+	padding:10px 15px;
+}
+
+
+#searchFrom{
+	width: 29%;
+  }
+
+  .beer-info{
+  width:30%;
+  margin-top: -20%;
+  margin-left: 22%;
+}
+
+/**event**/
+.tour{
+	width: 1000px;
+}
+
+.bottom-left{
+  width: 870px;
+}
+
+.tour h3{
+	font-size: 30px;
+}
+
+.chart{
+	width: 900px;
+}
+
+
+
+th, td {
+  padding: 9px;
+  text-align: left;
+}
+
+}
+
+@media screen and (min-width:1400px){
+
+
+#mainNav ul li{
+	margin-right: 20px;
+	font-size: 17px;
+}
+
+#mainNav ul li a{
+	padding:15px 20px;
+}
+
+#searchFrom{
+	width: 30%;
+    margin-top: 5px;
+  }
+
+
+#searchFrom input[type=submit]:hover{
+	color: red;
+}
+
+
 
 .socialMedia{
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	margin:100px 10px 0 150px;
+	margin-top: 5%;
+
+
+}
 }
 
-.socialMedia img{
-	border-radius: 8px;
-	width: 45px;
-	margin-right: 10px;
-}
 
-.socialMedia a{
-	filter: grayscale(0%);
-}
-.socialMedia  a:hover{
-	filter: grayscale(80%);
-}
+

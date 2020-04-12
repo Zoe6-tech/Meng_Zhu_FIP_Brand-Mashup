@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>This is Tyskie Events Page</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"> 
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet"> 
+  <title>This is Events Page</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i&display=swap" rel="stylesheet"> 
+
 </head>
 
 <body>
-	<div id="container">
-
-	 <header class="mainHeader">
-	  <h1 class="hidden">Welcome to Tyskie Events Page</h1>
-	   <div class="logoHeader">
-	   	<h2 class="hidden">Tyskie Logo</h2>
-      <img src="images/Logo.svg" alt="logo">
-	   </div>
-	    <nav id="mainNav">  
+  <div id="container">
+   <header class="mainHeader">
+    <h1 class="hidden">Welcome to Tyskie Events Page</h1>
+     
+      <nav id="mainNav">  
         <h2 class="hidden">Header Navigation</h2>
-        <ul>
+        <button id="button"></button>
+            <div id="crownburger">
+        <ul id="burgerMenu">
         <li><a href="home.html">Home</a></li>
-        <li><a href="product.html">Our Product</a></li>
+        <li><a href="beers.html">Beers</a></li>
         <li><a class="active" href="event.html">Events</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="about.html">About Us</a></li>
         </ul>
-      </nav>
-	 </header>
-      <main>
+        <form id="searchFrom" action="search.php" method="get">
+          <h2 class="hidden">Search Form</h2>
+              <div id="searchCon"> 
+                <input type="text">
+                 <input type="submit" value="Search">
+              </div>
+        </form>
+          </div>
+      </nav> 
+
+      <div class="logoHeader">
+      <h2 class="hidden">Tyskie Logo</h2>
+      <img src="images/Tyskie_Logo.svg" alt="Tyskie_Logo">
+     </div> 
+   </header>
+
+   
+      <main class="beerbck">
 
         <div class="tour">
           <h2 class="hidden">Events here</h2>
@@ -44,14 +57,15 @@
           <h3>Explore centuries-old Tyskie Brewery with KrakowDirect</h3>
           <div class="trip">
             <img src="images/Tyskie.jpg" alt="tyskie">
-          <p>Are you ready to discover Tyskie Brewery, its long history and tradition hidden in secret Tyskie beer recipes? Our Tyskie Brewery Tour is a journey to centuries-old brewery.  It is now turned into a museum together with state-of-the-art brewery and packaging lines.<br><br>
+          <p>Are you ready to discover Tyskie Brewery??? 
+            <br><br>Its long history and tradition hidden in secret Tyskie beer recipes? Our Tyskie Brewery Tour is a journey to centuries-old brewery.  It is now turned into a museum together with state-of-the-art brewery and packaging lines.<br><br>
           Our Tyskie Brewery Tour from Krakow takes approximately 5-6 hours. It includes private Mercedes car and friendly, English speaking driver. We will pick you up directly from your hotel in Krakow. After the tour, we drop you off at your hotel or anywhere in the city centre. We suggest pick up time between 9 a.m. and 10 a.m. Guided tour in Tyskie Brewery takes approximately 2.5 hours. In the end of the visit you have a chance to try fresh Tyskie beer straight from the brewery.</p>
         </div>
 
         </div>
 
         <div class="includes">
-          <h4>What's Included</h4>
+          <h4>What's Included???</h4>
            <ul class="a">
              <li>Door-to-door pick up and drop off</li>
              <li>Private, air-conditioned Mercedes car/van</li>
@@ -64,10 +78,7 @@
            <ul class="b">
              <li>Regular/shared guided tour in English is included in the price.</li>
              <li>There are also tours with shared/regular guided tour in other languages available. Please contact our customer service to check the availability of the tours in other languages.</li>
-           </ul> 
-           <br><p>If you have any questions please don't hesitate to contact us.</p> 
-           <a href="contact.html">Contact Us</a>   
-           <a href="contact.html" >Book Now</a>     
+           </ul>     
         </div>
 
         <div class="chart">
@@ -94,22 +105,21 @@
       </main>
 
 	       <footer id="footer">   
-      	 <nav id="footerNav">
-          <h2 class="hidden">Footer Navigation</h2>
+        <h2 class="hidden">Footer</h2>
+        <div class="footerbox">
+         <nav id="footerNav">
+          <h3 class="hidden">Footer Navigation</h3>
           <ul>
            <li><a href="home.html">Home</a></li>
-           <li><a class="active" href="product.html">Our Product</a></li>
+           <li><a  href="beers.html">Beers</a></li>
            <li><a href="event.html">Events</a></li>
            <li><a href="contact.html">Contact Us</a></li>
            <li><a href="about.html">About Us</a></li>
           </ul>
          </nav>
-       <div id="copyright">
-      	<h2 class="hidden">Copyright</h2>
-        <p>© 2020 TYSKIE</p>      
-        </div>
-         <div class="socialMedia">
-               <h2 class="hidden">Social Media</h2>
+      
+      <div class="socialMedia">
+               <h3 class="hidden">Social Media</h3>
              
               <a href="http://www.facebook.com">
                 <img src="images/facebook.svg" alt="facebook">
@@ -122,8 +132,15 @@
               <a href="http://www.youtube.com">
                 <img src="images/youtube.svg" alt="youtube">
               </a>
-           
-      </div>  
+         </div> 
+        </div>
+
+       <div id="copyright">
+        <h3 class="hidden">Copyright</h3>
+        <p>© 2020 TYSKIE</p>      
+        </div>
+
+          
       </footer>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
