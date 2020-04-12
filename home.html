@@ -11,49 +11,65 @@
 
 <body>
 	<div id="container">
-
 	 <header class="mainHeader">
-	  <h1 class="hidden">Welcome to Tyskie Home Page</h1>
-	   <div class="logoHeader">
-	   	<h2 class="hidden">Tyskie Logo</h2>
-      <img src="images/Logo.svg" alt="logo">
-	   </div>
-	  
-	    <nav id="mainNav">  
+	  <h1 class="hidden">Welcome to Tyskie Home Page</h1> 
+      <nav id="mainNav"> 
+
         <h2 class="hidden">Header Navigation</h2>
-        <ul>
+        <button id="button"></button>
+
+        <div id="crownburger">
+
+        <ul id="burgerMenu">
         <li><a class="active" href="home.html">Home</a></li>
-        <li><a href="product.html">Our Product</a></li>
+        <li><a href="beers.html">Beers</a></li>
         <li><a href="event.html">Events</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="about.html">About Us</a></li>
         </ul>
-	    </nav>
-      
+         
+        <form id="searchFrom" action="search.php" method="get">
+          <h2 class="hidden">Search Form</h2>
+              <div id="searchCon"> 
+                <input type="text">
+                 <input type="submit" value="Search">
+              </div>
+        </form>
+
+        </div>
+	    </nav> 
+
+      <div class="logoHeader">
+      <h2 class="hidden">Tyskie Logo</h2>
+      <img src="images/Tyskie_Logo.svg" alt="Tyskie_Logo">
+      </div> 
 	 </header>
 
-     <main>
-      <div id="mainImages">
-      <h2 class="hidden">MainImageGroup</h2>
-        <nav class="move">
-          <h3 class="hidden">Animation Images</h3>
-        <ul>
-         <li><img class="f1" src="images/beers1.jpg" alt="beers1"></li>
-         <li><img class="f2" src="images/beers2.jpg" alt="beers2"></li>
-         <li><img class="f3" src="images/beers3.jpg" alt="beers3"></li>
-         <li><img class="f4" src="images/beers4.jpg" alt="beers4"></li>
-         <li><img class="f5" src="images/beers5.jpg" alt="beers5"></li>
+     <main class="beerbck">
+       <section id="imageContainer">
+      <div id="bottleImages" style="right:0"> 
+        <h2 class="hidden">Image Container </h2>
+        <img src="images/gronie_homepage.jpg" alt="gronie" />
+        <img src="images/Palone_homepage.jpg" alt="Palone" />
+        <img src="images/bottles_homepage.jpg" alt="bottles" />
+        <img src="images/pszenne_homepage.jpg" alt="pszenne" />
+        <img src="images/pilzne_homepage.jpg" alt="/pilzne" >
+        </div>
+      </section>
+        <p class="beer-info"></p>
+    <nav id="bottomNav">
+      <h2 class="hidden">Beer Buttoms</h2>
+      <ul id="navList">
+            <li><div class="iconContainer gronie" data-offset="0"></div></li>
+            <li><div class="iconContainer Palone" data-offset="1"></div></li>
+            <li><div class="iconContainer crown" data-offset="2"></div></li>
+            <li><div class="iconContainer pszenne" data-offset="3"></div></li>
+            <li><div class="iconContainer pilzne" data-offset="4"></div></li>
         </ul>
-        </nav>
-    	</div>
-         
+
+    </nav>
         <div class="jump"> 
-        <h2>  
-        <span>We &nbsp;</span>  
-        <span>Are &nbsp;</span>  
-         <span>From &nbsp;</span>  
-         <span>Polish</span>   
-        </h2>
+        <h2 >Beer/Product of Poland </h2>
         <br><p>Tyskie-name comes from the brewery located in the Upper Silesia town of Tychy.The brand is brewed by the Princely Brewery Tychy (Polish Tyskie Browary Ksiazece), part of the Kompania Piwowarska brewery group, a former subsidiary of SABMiller since 1999 as a result of the merger of two SABMiller owned Polish breweries, the Lech Browary Wielkopolski (Lech Brewery Greater Poland) in Poznań, and the Tyskie Browary Ksiazece in Tychy. </p>
        </div>
 
@@ -69,7 +85,7 @@
              </div>
              <div class="textbox"> 
               <p>The award-winning Polish beer Tyskie, one of the most popular beers in Poland.Tyskie has all the typical characteristics of a pale lager — yellow color, medium carbonation, slight bready malt and grassy hops in the aroma, which carries over into the taste. It produced a white fluffy head that sunk fairly quickly.</p>
-                <a href="about.html" class="buttom1">Know More</a>
+                <a href="about.html" class="buttom1">About Us</a>
              </div>
              
          </div>
@@ -82,7 +98,7 @@
              </div>
              <div class="textbox"> 
               <p> Sweeter Tyskie differs from other lagers.In a other word, the main difference between Tyskie and others beers is that it is sweeter.The sweetness is nothing terrible, just different.The sweetness in the 5.3% ABV Tyskie is undercut by some bitterness at the end, which helps balance out the lager.</p>
-              <a href="about.html" class="buttom1">Know More</a>
+              <a href="event.html" class="buttom1">Know More</a>
              </div>
          </div>	
 
@@ -94,29 +110,28 @@
              </div>
              <div class="textbox"> 
               <p> The Tyskie family encompasses the following variants: classic, golden lager (Tyskie Gronie), unpasteurized (Tyskie Niepasteryzowane chmielone na zimno), unprocessed served from a tank (14-Day Tyskie Gronie), low-alcohol (Tyskie Jasne Lekkie), mix of beer and the taste of fresh lemons (Tyskie Radler). </p>
-               <a href="product.html" class="buttom1">Buy Now</a>
+               <a href="beers.html" class="buttom1">Buy Now</a>
              </div>
          </div>		
         </div>
        </main>
+
       <footer id="footer">   
+        <h2 class="hidden">Footer</h2>
+        <div class="footerbox">
          <nav id="footerNav">
-          <h2 class="hidden">Footer Navigation</h2>
+          <h3 class="hidden">Footer Navigation</h3>
           <ul>
            <li><a href="home.html">Home</a></li>
-           <li><a class="active" href="product.html">Our Product</a></li>
+           <li><a  href="beers.html">Beers</a></li>
            <li><a href="event.html">Events</a></li>
            <li><a href="contact.html">Contact Us</a></li>
            <li><a href="about.html">About Us</a></li>
           </ul>
          </nav>
       
-       <div id="copyright">
-      	<h2 class="hidden">Copyright</h2>
-        <p>© 2020 TYSKIE</p>      
-        </div>
-         <div class="socialMedia">
-               <h2 class="hidden">Social Media</h2>
+      <div class="socialMedia">
+               <h3 class="hidden">Social Media</h3>
              
               <a href="http://www.facebook.com">
                 <img src="images/facebook.svg" alt="facebook">
@@ -129,8 +144,15 @@
               <a href="http://www.youtube.com">
                 <img src="images/youtube.svg" alt="youtube">
               </a>
-           
-      </div>  
+         </div> 
+        </div>
+
+       <div id="copyright">
+      	<h3 class="hidden">Copyright</h3>
+        <p>© 2020 TYSKIE</p>      
+        </div>
+
+          
       </footer>
     </div>
     <script type="text/javascript" src="js/main.js"></script>

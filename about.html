@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>This is Tyskie About Page</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"> 
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet"> 
+  <title>This is About Page</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i&display=swap" rel="stylesheet"> 
 
 </head>
 
 <body>
-	<div id="container">
-
-	 <header class="mainHeader">
-	  <h1 class="hidden">Welcome to Tyskie About Us Page</h1>
-	   <div class="logoHeader">
-	   	<h2 class="hidden">Tyskie Logo</h2>
-      <img src="images/Logo.svg" alt="logo">
-	   </div>
-	    <nav id="mainNav">  
+  <div id="container">
+   <header class="mainHeader">
+    <h1 class="hidden">Welcome to Tyskie About Page</h1>
+     
+      <nav id="mainNav">  
         <h2 class="hidden">Header Navigation</h2>
-        <ul>
+        <button id="button"></button>
+            <div id="crownburger">
+        <ul id="burgerMenu">
         <li><a href="home.html">Home</a></li>
-        <li><a href="product.html">Our Product</a></li>
+        <li><a href="beers.html">Beers</a></li>
         <li><a href="event.html">Events</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a class="active" href="about.html">About Us</a></li>
+        <li><a class="active"  href="about.html">About Us</a></li>
         </ul>
-      </nav>
-	 </header>
+        <form id="searchFrom" action="search.php" method="get">
+          <h2 class="hidden">Search Form</h2>
+              <div id="searchCon"> 
+                <input type="text">
+                 <input type="submit" value="Search">
+              </div>
+        </form>
+          </div>
+      </nav> 
+
+      <div class="logoHeader">
+      <h2 class="hidden">Tyskie Logo</h2>
+      <img src="images/Tyskie_Logo.svg" alt="Tyskie_Logo">
+     </div> 
+   </header>
+
         
-        <main>
+        <main class="beerbck">
         
-        <div class="about">
+        <div class="tour">
           <h2 class="hidden">Need to Know about us</h2>
         <img src="images/about.jpg" alt="factory">
         <div class="bottom-left">
@@ -46,13 +57,13 @@
           <h3>Our Honors</h3>
             <ul>
               <li> In 2002, Tyskie Gronie won The Brewing Industry International Awards, receiving the two most prestigious awards - Gold Medal and Grand Prix.</li>
-              <li> In 2005 in Munich at a global beer fair hosted by Drink Tec, Tyskie again received the Grand Prix. </li>
-              <li>  In 2011 Tyskie received the Gold Medal du Monde Selection – International Institute for Quality Selections.  </li>
+              <li> In 2005, in Munich at a global beer fair hosted by Drink Tec, Tyskie again received the Grand Prix. </li>
+              <li>  In 2011, Tyskie received the Gold Medal du Monde Selection – International Institute for Quality Selections.  </li>
             </ul>
         </div>
 
         <div class="unique">
-        <h3>What's Unique?</h3>
+        <h3>What's Unique???</h3>
          <div class="uniques">
            <img src="images/Tyskie-Klasyczne.jpg" alt="Tyskie-Klasyczne">
             <ul>
@@ -71,22 +82,21 @@
         </main>
 
 	       <footer id="footer">   
-      	 <nav id="footerNav">
-          <h2 class="hidden">Footer Navigation</h2>
+        <h2 class="hidden">Footer</h2>
+        <div class="footerbox">
+         <nav id="footerNav">
+          <h3 class="hidden">Footer Navigation</h3>
           <ul>
            <li><a href="home.html">Home</a></li>
-           <li><a class="active" href="product.html">Our Product</a></li>
+           <li><a  href="beers.html">Beers</a></li>
            <li><a href="event.html">Events</a></li>
            <li><a href="contact.html">Contact Us</a></li>
            <li><a href="about.html">About Us</a></li>
           </ul>
          </nav>
-       <div id="copyright">
-      	<h2 class="hidden">Copyright</h2>
-        <p>© 2020 TYSKIE</p>      
-        </div>
-         <div class="socialMedia">
-               <h2 class="hidden">Social Media</h2>
+      
+      <div class="socialMedia">
+               <h3 class="hidden">Social Media</h3>
              
               <a href="http://www.facebook.com">
                 <img src="images/facebook.svg" alt="facebook">
@@ -99,8 +109,15 @@
               <a href="http://www.youtube.com">
                 <img src="images/youtube.svg" alt="youtube">
               </a>
-           
-      </div>  
+         </div> 
+        </div>
+
+       <div id="copyright">
+        <h3 class="hidden">Copyright</h3>
+        <p>© 2020 TYSKIE</p>      
+        </div>
+
+          
       </footer>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
