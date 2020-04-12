@@ -1,6 +1,7 @@
  let iconButtons=document.querySelectorAll(".iconContainer"),
       imageContainer=document.querySelector('#bottleImages'),
       beerDescription=document.querySelector(".beer-info");
+
  var button = document.querySelector("#button");
   var crownBurger = document.querySelector("#crownburger");
 
@@ -33,16 +34,9 @@
  
 
  function animateBanners(){
-
-  //clicking on the shield should trigger an animation
-  // figure out how far the banners should move with simple math
-
     let offsetWidth=950;
     let multiplier= this.dataset.offset;
     let newPosition=offsetWidth*multiplier;
-    //debugger;
-    //change the style.right property to match the new position-where it needs to move to
-    //right
     imageContainer.style.right=`${newPosition}px`;
      beerDescription.textContent = beerData[multiplier][0];
   } 
